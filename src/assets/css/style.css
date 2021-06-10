@@ -1,0 +1,157 @@
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+img {
+  border: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.cl {
+  clear: both;
+}
+
+/* 通用 */
+/* 底部导航 */
+.foohi {
+  height: 52px;
+}
+
+.footer {
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  border-top: 1px solid #efefef;
+  background: #ffffff;
+}
+
+.footer li {
+  width: 25%;
+  float: left;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.footer li a {
+  display: block;
+}
+
+.footer li img {
+  height: 24px;
+}
+
+.footer li p {
+  color: #888888;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.footer .on p {
+  color: #29a1f7;
+}
+
+/* 顶部标题 */
+.classreturnbox {
+  height: 47px;
+}
+
+.classreturn {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  color: #111;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  height: 46px;
+  line-height: 46px;
+}
+
+.classreturn .return {
+  position: absolute;
+  left: 10px;
+}
+
+.classreturn .return a {
+  overflow: hidden;
+  display: block;
+}
+
+.classreturn .return a img {
+  width: 24px;
+  height: 24px;
+}
+
+.classreturn .tit {
+  font-size: 18px;
+  padding-left: 42px;
+}
+
+.classreturn .nav_menu {
+  position: absolute;
+  right: 15px;
+}
+
+.classreturn .nav_menu a {
+  display: block;
+  color: #999;
+}
+
+.classreturn .nav_menu img {
+  width: 24px;
+}
+
+.classreturn .ds-in-bl {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.title-header {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 13px;
+  padding: 8px 16px 8px;
+  display: block;
+}
+
+.daoxu {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.am-list-more {
+  background: #fff;
+  line-height: 1.4;
+  padding: 12px 0;
+  display: block;
+  font-size: 14px;
+  color: #108ee9;
+  text-align: center;
+}
