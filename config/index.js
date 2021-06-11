@@ -12,23 +12,23 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // 配置第一个服务器地址'
-      '/api': {
+      '/xinqibao_api': {
         // changeOrigin为true的时候代表跨域，请求接口的时候会自动加上api前缀，前提是api被设置为基准地址 
         target: 'https://xinqibao.xyabb.com', // 这里填写你要请求的服务器地址
         secure: true, // https协议需要则设置为true 否则设为false
         changeOrigin: true, // 配置接口跨域
         pathRewrite: {
-          '^/api': '/'
+          '^/xinqibao_api': '/'
           //重写请求地址
         }
       },
 
       // 配置第二个服务器地址
-      '/local': {
+      '/local_api': {
         target: 'https://xinqibao.xyabbss.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/local': '/'
+          '^/local_api': '/'
         }
       }
     },

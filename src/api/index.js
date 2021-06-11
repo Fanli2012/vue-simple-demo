@@ -22,6 +22,30 @@ const getData = {
       params: params
     })
   },
+  // 获取商品列表
+  getGoodsList(params) {
+    return request.get(config.appApiUrl + '/goods/index', {
+      params: params
+    })
+  },
+  // 获取商品详情
+  getGoodsDetail(params) {
+    return request.get(config.appApiUrl + '/goods/detail', {
+      params: params
+    })
+  },
+  // 获取单页详情
+  getPageDetail(params) {
+    return request.get(config.appApiUrl + '/page/detail', {
+      params: params
+    })
+  },
+  // 获取店铺详情
+  getShopDetail(params) {
+    return request.get(config.appApiUrl + '/shop/detail', {
+      params: params
+    })
+  },
 }
 
 export default getData

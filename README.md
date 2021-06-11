@@ -1,27 +1,20 @@
-# vue-antui
+# Vue入门项目
 
-> A Vue.js project
+> vue移动端项目推荐，vue项目源码，简单vue项目案例，vue实例项目代码
 
-## Build Setup
+
+## 效果截图
+
+![alt text](src/assets/img/screenshots.jpg "效果截图")
+
+
+## 安装
 
 ``` bash
-# install dependencies
+git clone git@github.com:Fanli2012/vue-simple-demo.git
+cd my-project
+# 安装依赖
 npm install
-
-# serve with hot reload at localhost:8080
+# 启动
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

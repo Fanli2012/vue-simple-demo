@@ -9,7 +9,7 @@ import axios from "axios";
  * @param {JSON}     data                  请求数据
  * @param {Function} callback                 回调函数
  */
-export default ajax = (url = '', callback, data = {}, method = 'get', header = {}) => {
+const ajax = (url = '', callback, data = {}, method = 'get', header = {}) => {
   axios({
       url: url,
       headers: header ? header : {
@@ -26,3 +26,5 @@ export default ajax = (url = '', callback, data = {}, method = 'get', header = {
       console.log(error)
     });
 };
+
+export default ajax

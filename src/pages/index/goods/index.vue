@@ -1,150 +1,182 @@
 <template>
   <div>
-    <img v-bind:style="{ 'width': '100%', 'height': '50vw' }" src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-
-    <div class="am-notice" role="alert">
-      <div class="am-notice-content">
-        <marquee scrollamount="3" style="vertical-align:middle;">把每个网站当做一个作品来开发，以工匠之心，精雕细琢，追求完美！
-        </marquee>
-      </div>
-    </div>
-
-    <div class="am-list am-list-twoline" style="padding:0;">
-      <div class="am-list-body">
-        <a href="javascript:void(0)" class="am-list-item am-list-item-indent line-twoline">
-          <div class="am-list-thumb"><img src="https://gw.alipayobjects.com/zos/rmsportal/JHWXyxsAgbuBUnvjjfos.png"
-              alt=""></div>
-          <div class="am-list-content">
-            <div class="am-list-title">繁橙工作室</div>
-            <div class="am-list-brief"><img style="width: 14px; height: 14px;" src="../../../assets/img/location2.png">
-              福建·厦门市</div>
+    <ul
+      class="ll-list"
+      id="goods_list"
+      style="padding-top: 15px"
+      v-if="list.length"
+    >
+      <li v-for="item in list" :key="item.id">
+        <a :href="'#/goods/detail?id=' + item.id">
+          <span v-if="item.is_promote > 0" class="label">限时抢购</span>
+          <img alt="" :src="item.litpic" />
+          <div class="ll-list-info">
+            <p class="ll-list-tit2">{{ item.title }}</p>
+            <p class="ll-list-click">{{ item.click }}人查看</p>
+            <div class="ll-list-price">
+              <span class="price">￥{{ item.price }}</span>
+              <span class="market-price">￥{{ item.market_price }}</span>
+            </div>
           </div>
-          <div class="am-list-arrow" aria-hidden="true"><img style="width: 14px; height: 14px;"
-              src="../../../assets/img/company_icon.png"></div>
         </a>
-      </div>
-    </div>
-
-    <div class="am-list" style="padding-top:0;">
-      <div class="am-list-body">
-        <a class="am-list-item">
-          <div class="am-list-content"><span style="color:#999;">联系人：</span>范例</div>
-        </a>
-        <a class="am-list-item">
-          <div class="am-list-content"><span style="color:#999;">联系方式：</span>13599123456</div>
-          <div class="am-list-arrow" aria-hidden="true"><img style="width: 14px; height: 14px;"
-              src="../../../assets/img/tel.png"></div>
-        </a>
-        <a class="am-list-item">
-          <div class="am-list-content"><span style="color:#999;">微信号：</span>123666</div>
-        </a>
-        <a class="am-list-item">
-          <div class="am-list-content"><span style="color:#999;">地址：</span>软件园二期软件园二期软件园二期软件园二期软件园二期软件园二期软件园二期软件园二期软件园二期
-          </div>
-          <div class="am-list-arrow" aria-hidden="true"><img style="width: 14px; height: 14px;"
-              src="../../../assets/img/location3.png"></div>
-        </a>
-      </div>
-    </div>
-
-    <div style="width:100%;overflow:hidden;">
-      <div class="am-horizon-swiper swiper-container swiper-container-horizontal">
-        <div class="am-hswiper-title">产品中心</div>
-        <div class="am-hswiper-list swiper-wrapper" style="width:100%;overflow:scroll;">
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥500</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称2</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥5000</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥500</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称2</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥5000</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥500</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称2</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥5000</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥500</div>
-          </a>
-          <a href="" class="am-hswiper-item swiper-slide">
-            <img class="am-hswiper-img" src="../../../assets/img/location3.png" />
-            <div class="am-hswiper-item-title">产品名称2</div>
-            <div class="am-hswiper-item-des" style="color:#f60;">
-              ￥5000</div>
-          </a>
-          <a href="" class="am-hswiper-item am-hswiper-more swiper-slide">
-            查看更多
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="am-list">
-      <div class="am-list-header">新闻动态</div>
-      <div class="am-list-body">
-        <a class="am-list-item">
-          <div class="am-list-thumb"><img src="https://gw.alipayobjects.com/zos/rmsportal/JHWXyxsAgbuBUnvjjfos.png"
-              alt=""></div>
-          <div class="am-list-content">标题文字</div>
-        </a>
-        <a class="am-list-item">
-          <div class="am-list-thumb"><img src="https://gw.alipayobjects.com/zos/rmsportal/JHWXyxsAgbuBUnvjjfos.png"
-              alt=""></div>
-          <div class="am-list-content">标题文字</div>
-        </a>
-
-        <a class="am-list-more">查看更多</a>
-      </div>
-    </div>
+      </li>
+      <div class="cl"></div>
+    </ul>
 
     <footerNav></footerNav>
   </div>
 </template>
 
 <script>
-  import footerNav from "../common/footer";
-  export default {
-    name: 'goods',
-    data() {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      };
-    },
-    components: {
-      footerNav
-    }
-  }
+import api from "../../../api";
+import util from "../../../utils/util";
+import footerNav from "../common/footer";
 
+export default {
+  name: "article-list",
+  data() {
+    return {
+      list: [],
+      hasMore: true,
+      limit: 10, // 每页十条
+      offset: 0,
+    };
+  },
+  components: {
+    footerNav,
+  },
+  props: {},
+  computed: {},
+  watch: {},
+  directives: {},
+  beforeCreate() {},
+  created() {},
+  mounted() {
+    this.getGoodsList();
+    window.addEventListener("scroll", this.scrollLoadMore, true);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.scrollLoadMore, false);
+  },
+  methods: {
+    /**
+     * 滚动到底部
+     */
+    scrollLoadMore() {
+      // 滚动到底部,获取数据
+      if (util.isScrollBottom()) {
+        this.getGoodsList();
+      }
+    },
+    getGoodsList() {
+      if (!this.hasMore) {
+        return;
+      }
+      api
+        .getGoodsList({
+          limit: this.limit,
+          offset: this.offset,
+        })
+        .then((res) => {
+          // console.log(res.data);
+          if (res.data.data.list) {
+            this.offset = this.offset + this.limit;
+            this.list = this.list.concat(res.data.data.list);
+          } else {
+            this.hasMore = false;
+          }
+        });
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.ll-tit {
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #fff;
+  color: #000000;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.ll-list {
+  padding: 0 15px 0 15px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.ll-list li {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  width: 50%;
+  float: left;
+}
+.ll-list li a {
+  position: relative;
+  display: block;
+  margin-right: 8px;
+  overflow: hidden;
+}
+.ll-list li:nth-child(even) a {
+  margin-right: 0;
+  margin-left: 8px;
+}
+.ll-list li img {
+  border-radius: 4px;
+  width: 100%;
+  height: 46vw;
+}
+.ll-list .ll-list-tit {
+  margin-top: 8px;
+  color: #333;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ll-list .ll-list-tit2 {
+  margin-top: 8px;
+  color: #333;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.ll-list .label {
+  font-size: 12px;
+  position: absolute;
+  color: #fff;
+  background: #ff3333;
+  display: inline-block;
+  border-bottom-right-radius: 5px;
+  padding: 0 4px;
+  text-align: center;
+  font-size: 12px;
+}
+.ll-list .ll-list-click {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+.ll-list .ll-list-price {
+  height: 30px;
+  line-height: 32px;
+  font-size: 16px;
+  color: #484848;
+}
+.ll-list .ll-list-price .price {
+  font-size: 18px;
+  color: #ff3333;
+}
+.ll-list .ll-list-price .market-price {
+  font-size: 12px;
+  color: #aaaaaa;
+  text-decoration: line-through;
+}
 </style>
