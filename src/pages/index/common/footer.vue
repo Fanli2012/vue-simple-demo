@@ -88,8 +88,8 @@ export default {
     } else if (this.$route.path == "/page/detail") {
       this.active = "page";
     }
-    console.log(this.$route.query);
-    console.log(this.$route.path);
+    // console.log(this.$route.query);
+    // console.log(this.$route.path);
   },
 };
 </script>

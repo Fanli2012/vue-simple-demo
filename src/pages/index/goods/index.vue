@@ -6,7 +6,7 @@
       style="padding-top: 15px"
       v-if="list.length"
     >
-      <li v-for="item in list" :key="item.id">
+      <li v-for="(item, index) in list" :key="index">
         <a :href="'#/goods/detail?id=' + item.id">
           <span v-if="item.is_promote > 0" class="label">限时抢购</span>
           <img alt="" :src="item.litpic" />

@@ -1,7 +1,7 @@
 {
   "name": "vue-antui",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Simple vue project case",
   "author": "Fanli2012 <374861669@qq.com>",
   "private": true,
   "scripts": {

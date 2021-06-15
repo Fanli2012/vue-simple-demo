@@ -17,4 +17,18 @@ cd my-project
 npm install
 # 启动
 npm run dev
+# 打包
+npm run build
 ```
+
+
+## 说明
+
+1、基于Vue2.0，完全免费，可以自由的进行二次开发。
+
+2、AntUI
+
+
+## Bug及建议
+
+如有Bug欢迎开Issues或者邮箱 277023115@qq.com 留言，如有好的建议以及意见也欢迎交流。

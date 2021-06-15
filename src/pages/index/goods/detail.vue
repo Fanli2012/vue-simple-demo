@@ -71,6 +71,7 @@ export default {
   components: {
     footerNav,
   },
+  computed: {},
   mounted() {
     api
       .getGoodsDetail({
@@ -87,12 +88,12 @@ export default {
       paginationClickable: true,
       autoHeight: true, //enable auto height
       slidesPerView: 1,
-      paginationClickable: true,
       spaceBetween: 30,
-      loop: true,
       centeredSlides: true,
-      autoplay: 3000,
+      autoplay: 5000,
       autoplayDisableOnInteraction: false,
+      observer: true,
+      observeParents: true,
     });
   },
 };
@@ -126,6 +127,7 @@ export default {
   background-color: #fff;
   margin-bottom: 10px;
   position: relative;
+  overflow: hidden;
 }
 .goods-header .title {
   font-weight: normal;

@@ -4,8 +4,8 @@
       <div class="am-list" style="padding: 0">
         <div class="am-list-body">
           <a
-            v-for="item in list"
-            :key="item.id"
+            v-for="(item, index) in list"
+            :key="index"
             :href="'#/article/detail?id=' + item.id"
             class="am-list-item"
           >

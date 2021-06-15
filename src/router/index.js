@@ -28,7 +28,7 @@ export default new Router({
       component: ArticleDetail,
       meta: {
         title: '文章详情',
-        keepAlive: false, // 不需要被缓存
+        keepAlive: true, // 不需要被缓存
       }
     },
     {
@@ -46,7 +46,7 @@ export default new Router({
       component: GoodsDetail,
       meta: {
         title: '产品详情',
-        keepAlive: false, // 不需要被缓存
+        keepAlive: true, // 不需要被缓存
       }
     },
     {
@@ -64,7 +64,7 @@ export default new Router({
       component: PageDetail,
       meta: {
         title: '页面详情',
-        keepAlive: false, // 不需要被缓存
+        keepAlive: true, // 不需要被缓存
       }
     },
     {
