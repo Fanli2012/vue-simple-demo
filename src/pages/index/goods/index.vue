@@ -49,7 +49,11 @@ export default {
   computed: {},
   watch: {},
   directives: {},
-  beforeCreate() {},
+  beforeCreate() {
+    this.list = [];
+    this.hasMore = true;
+    this.offset = 0;
+  },
   created() {},
   mounted() {
     this.getGoodsList();
@@ -80,12 +84,12 @@ export default {
         .then((res) => {
           // console.log(res.data);
           if (res.data.data.list) {
-            this.offset = this.offset + this.limit;
             this.list = this.list.concat(res.data.data.list);
           } else {
             this.hasMore = false;
           }
         });
+      this.offset = this.offset + this.limit;
     },
   },
 };
